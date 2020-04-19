@@ -1,18 +1,20 @@
 import React from 'react';
+import "./style.css";
+
+
 
 function Card(props) {
 
     return (
-        <div>
-                <div className="row justify-content-center bg-secondary">
-                <div className="card">
-                    <h1>Headache</h1>
-                    </div>
-                </div>
-              
-        </div>
-
         
+  
+                    <div className="card bg-secondary">
+                        
+                    <h1 classNme = "card-title">{props.heading}</h1>
+                    <div className ="card-body">Some text</div>
+                    <a href="/" className="btn btn-primary">Go somewhere</a>
+                    </div>
+
          
             )
     }

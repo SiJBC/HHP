@@ -1,0 +1,44 @@
+
+[
+    {   "id": "1",
+        "heading": "Headache"
+    },
+    
+    {
+        "id": "2",
+        "heading": "Diabetes"
+    },
+    {
+        "id": "3",
+        "heading": "Skin Disorders"
+    },
+    {
+        "id": "4",
+        "heading": "Joint Pain"
+    },
+    {
+        "id": "5",
+        "heading": "Back Problems"
+    },
+    {
+        "id": "6",
+        "heading": "High Cholesterol"
+    },
+    {
+        "id": "7",
+        "heading": "Breathing difficulty"
+    },
+    {
+        "id": "8",
+        "heading": "Anxiety"
+    },
+    {
+        "id": "9",
+        "heading": "Alzheimers"
+    },
+    {
+        "id": "10",
+        "heading": "Heart Disease"
+    }
+
+]
