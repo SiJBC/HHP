@@ -1,10 +1,8 @@
-var React = require('react');
-var Component = React.Component;
-var CanvasJSReact = require('./canvasjs.react');
-var CanvasJS = CanvasJSReact.CanvasJS;
+import React, { Component } from 'react';
+import CanvasJSReact from '../../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-
-class App extends Component {
+ 
+class PieChart extends Component {
 	render() {
 		const options = {
 			exportEnabled: true,
@@ -29,9 +27,11 @@ class App extends Component {
 				]
 			}]
 		}
+		
 		return (
 		<div>
-			<CanvasJSChart options = {options}
+			<h1>React Pie Chart</h1>
+			<CanvasJSChart options = {options} 
 				/* onRef={ref => this.chart = ref} */
 			/>
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
@@ -39,4 +39,5 @@ class App extends Component {
 		);
 	}
 }
-module.exports = App;      
+
+export default PieChart;

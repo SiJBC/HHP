@@ -40,7 +40,7 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
 
-const port = process.env.PORT || 4040;
+const port = process.env.PORT || 3030;
 
 app.listen(port, () => 
 console.log(`Server up and running on port ${port} !`));

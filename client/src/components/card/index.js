@@ -12,7 +12,7 @@ function Card(props) {
                         
                     <h1 classNme = "card-title">{props.heading}</h1>
                     <div className ="card-body">Some text</div>
-                    <a href="/" className="btn btn-primary">Go somewhere</a>
+                    <a href={props.heading} className="btn btn-primary">Go somewhere</a>
                     </div>
 
          
