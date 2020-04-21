@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 const PrivateRoute = ({ component: Component, auth, ...rest }) => (
+  
   <Route
     {...rest}
     render={props =>
@@ -11,6 +12,8 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => (
         <Component {...props} />
       ) : (
         <Redirect to="/login" />
+
+      
       )
     }
   />
