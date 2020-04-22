@@ -10,7 +10,7 @@
     "client": "npm start --prefix client",
     "seed": "node scripts/seedDB.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild" :"cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild" :"npm run seed && cd client && npm install --only=dev && npm install && npm run build"
     
   },
   "author": "",
