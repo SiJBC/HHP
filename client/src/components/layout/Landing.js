@@ -23,8 +23,9 @@ function Landing(props) {
         
         <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Head Ache</Button>
         <Collapse isOpen={isOpen}>
-            <Card>
-             Hello</Card></Collapse>
+            <div className ="card">
+              <div className ="card-body">Study consists of 5 user entries and began on 12/12/19 </div>
+            <a href="/headache" className="btn btn-primary">See headache data</a> </div></Collapse>
       </Alert>
           </div>
 
