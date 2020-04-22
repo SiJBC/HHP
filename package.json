@@ -9,7 +9,9 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "seed": "node scripts/seedDB.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild" :"cd client && npm install --only=dev && npm install && npm run build"
+    
   },
   "author": "",
   "license": "MIT",
