@@ -10,7 +10,7 @@ export  default {
     },
 
     getHeadacheNoPharm(){
-        return axios.get("/api/ailments/headache/nonpharm")
+        return axios.get("/api/ailments/headache/nopharm")
     },
 
     getBackpain(){

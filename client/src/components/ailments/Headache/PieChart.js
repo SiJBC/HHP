@@ -1,9 +1,34 @@
-import React, { Component } from 'react';
+import React, {  useEffect, useState } from 'react';
 import CanvasJSReact from '../../../assets/canvasjs.react';
+import API from "../../../utils/API"
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
  
 function PieChart(props) {
+	
+	const [pharm, setPharm] = useState([])
+	const [noPharm, setNoPharm] = useState([])
+
+	useEffect(() => {
+		loadHeadachePharm()
+		loadHeadacheNoPharm()
+	}, [])
+
+	function loadHeadachePharm(){
+		
+		API.getHeadachePharm()
+		.then(Pharmres =>            
+			setPharm(Pharmres.data))
+	} 
+
+	function loadHeadacheNoPharm(){
+		
+		API.getHeadacheNoPharm()
+		.then(NoPharmres =>            
+			setNoPharm(NoPharmres.data))
+	}
+
  {
+	//  console.log(pharm)
 		const options = {
 			exportEnabled: false,
 			animationEnabled: true,
@@ -19,8 +44,8 @@ function PieChart(props) {
 				indexLabelFontSize: 16,
 				indexLabel: "{label} - {y}",
 				dataPoints: [
-					{ y: 18, label: "Pharmaceutical" },
-					{ y: 49, label: "Non-pharmaceutical" },
+					{ y: pharm.length, label: "Pharmaceutical" },
+					{ y: noPharm.length, label: "Non-pharmaceutical" },
 			
 				]
 			}]

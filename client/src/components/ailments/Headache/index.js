@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // import PieChart from "./PieChart.js"
 import Hero from "../../Hero"
 import Footer from "../../Footer"
