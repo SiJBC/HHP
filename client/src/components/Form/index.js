@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Input, Input1, Input2, FormBtn} from "./userForm"
 import { Col, Row, Container } from "../Grid";
 import API from "../../utils/API";
@@ -6,8 +6,23 @@ import Jumbotron from "../Jumbotron";
 
 function Form() {
     // Setting our component's initial state
-    
+   
     const [formObject, setFormObject] = useState({})
+    const [userPosts, setUserPosts] = useState([])
+
+    function loadUserPosts(email){
+      console.log(email)
+      API.returnByEmail(email)
+      .then(res =>
+        console.log(res)
+      )
+      .catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+      const email = localStorage.getItem("userEmail") 
+      loadUserPosts(email)
+    }, [])
     
   
     // Load all books and store them with setBooks
@@ -41,7 +56,7 @@ function Form() {
         console.log(formObject)
       
     };
-  
+  // use the books example for the display ailments, need to match the email from local storage
       return (
         <Container fluid>
           <Row>

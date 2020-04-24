@@ -27,5 +27,10 @@ export  default {
 
     postAilment(userData){
         return axios.post("/api/ailments", userData)
+    },
+
+    returnByEmail(email){
+        return axios.get("/api/ailments/?email=" + email)
     }
 }
+

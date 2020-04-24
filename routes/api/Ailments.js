@@ -26,5 +26,8 @@ router.route("/")
 router.route("/")
 .post(ailmentController.create)
 
+router.route("/:email")
+.get(ailmentController.findByEmail)
+
 
 module.exports = router

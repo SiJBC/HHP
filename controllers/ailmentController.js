@@ -43,6 +43,13 @@ module.exports = {
         .catch(err => res.status(422).json(err))
     },
 
+    findByEmail: function(req, res){
+        db.Ailments.find({"email": req.params.email})
+        console.log(req.parmas.email)
+        .then(dbModel => res.json(dbModel)) 
+        .catch(err => res.status(422).json(err))
+    },
+
     create: function(req, res){
       db.Ailments
         .create(req.body)
