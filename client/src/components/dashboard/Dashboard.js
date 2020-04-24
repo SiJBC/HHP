@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
+
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -23,6 +24,7 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
               </p>
             </h4>
+          
             <button
               style={{
                 width: "150px",
@@ -35,6 +37,7 @@ class Dashboard extends Component {
             >
               Logout
             </button>
+           
           </div>
         </div>
       </div>

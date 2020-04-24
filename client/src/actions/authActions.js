@@ -22,6 +22,9 @@ export const loginUser = userData => dispatch => {
   axios
     .post("/api/users/login", userData)
     .then(res => {
+      const userEmail = userData.email
+      console.log(userEmail)
+      localStorage.setItem("userEmail", userEmail)
       // Save to localStorage
 
       // Set token to localStorage

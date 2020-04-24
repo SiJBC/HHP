@@ -24,6 +24,7 @@ import BreathingDifficulties from "./components/ailments/Headache";
 import Anxiety from "./components/ailments/Headache";
 import Alzheimers from "./components/ailments/Headache";
 import HeartDisease from "./components/ailments/Headache";
+import Form from "./components/Form"
 import "./App.css";
 
 // Check for token to keep user logged in
@@ -65,6 +66,7 @@ class App extends Component {
             <Route exact path ="/Anxiety" component={Anxiety} />
             <Route exact path ="/Alzheimers" component={Alzheimers} />
             <Route exact path ="/HeartDisease" component={HeartDisease} />
+            <Route exact path ="/Form" component ={Form} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>

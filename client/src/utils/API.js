@@ -24,4 +24,8 @@ export  default {
     getBackpainNoPharm(){
         return axios.get("/api/ailments/backpain/nopharm")
     },
+
+    postAilment(userData){
+        return axios.post("/api/ailments", userData)
+    }
 }

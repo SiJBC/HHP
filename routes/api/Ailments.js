@@ -23,5 +23,8 @@ router.route("/backpain/nopharm")
 router.route("/")
 .get(ailmentController.findAll)
 
+router.route("/")
+.post(ailmentController.create)
+
 
 module.exports = router
